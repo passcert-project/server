@@ -57,7 +57,7 @@ There are 2 options for deploying your own SQL server.
 
 3. Now run the command `./bitwarden.sh start`. This will give you the entire Bitwarden Server (not just the SQL server), but it is the quickest and easiest method to get what you need.
 
-- Maybe run the command `docker ps` to see the status of each container
+   - Maybe run the command `docker ps` to see the status of each container
 
 4. Now stop the execution with `./bitwarden.sh stop`
 
