@@ -63,7 +63,7 @@ There are 2 options for deploying your own SQL server.
 
 5. Open a terminal with elevated privileges and navigate to your `bwdata` install folder
 
-- Might work without elevated privileges
+   - Might work without elevated privileges
 
 6. Run the SQL Docker container with these arguments:
 
@@ -165,7 +165,7 @@ Alternatively, there are emulators that allow you to run local dev instances of 
 
 **licenseDirectory**: this must be set to avoid errors, but it can be set to an aribtrary empty folder.
 
-- I'm using macOs and my folder path is: `c:/bwtest/licenses`
+- I'm using macOS and my folder path is: `c:/bwtest/licenses`
 
 **installation\_\_key** and **installation\_\_id**: request your own private Installation Id and Installation Key for self-hosting: https://bitwarden.com/host/.
 
