@@ -96,7 +96,9 @@ Right-click on the project in the Solution Explorer and click **Manage User Secr
 
 ### Editing user secrets - Visual Studio on macOS
 
-Open a terminal and navigate to the project directory. Once there, initiate and create the blank user secrets file by running:
+Open a terminal and navigate to the project directory, like `src/<project-name>`. For our setup, only `src/Identity` and `src/Api` are relevant.
+
+Once there, initiate and create the blank user secrets file by running:
 
 ```bash
 dotnet user-secrets init
