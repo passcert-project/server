@@ -74,7 +74,7 @@ There are 2 options for deploying your own SQL server.
    --mount type=bind,source="$(pwd)"/mssql/backups,target=/etc/bitwarden/mssql/backups bitwarden/mssql
    ```
 
-   **Note 1:** Beware the rules of the password. It has to be at least 8 characters and contain 3 of the 4 classes: _lower-case, upper-case, numbers, symbols_.
+**Note 1:** Beware the rules of the password. It has to be at least 8 characters and contain 3 of the 4 classes: _lower-case, upper-case, numbers, symbols_.
 
 **Note 2:** you will need the `SA_PASSWORD` you set here for the connection string in your user secrets (see below).
 
