@@ -224,6 +224,11 @@ var certThumbprint = !environment.IsDevelopment() ? "207E64A231E8AA32AAF68A61037
 
 ⚠️ Do not commit this change, as it might ruin the experience for others.
 
+If you changed this file, maybe tell git to don't assume any changes on it, with this command:
+
+`git update-index --assume-unchanged src/Core/Services/Implementations/LicensingService.cs`
+
+
 # After the first installation
 
 **Note:** Make sure you followed [this guide](https://github.com/passcert-project/browser/blob/master/README.md) to start the bitwarden's browser extension. Only then will the below command work.
