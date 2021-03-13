@@ -214,3 +214,8 @@ bitwarden_license/src/Portal/wwwroot/css
 bitwarden_license/src/Sso/wwwroot/lib
 bitwarden_license/src/Sso/wwwroot/css
 .github/test/build.secrets
+
+# Passcert instalation "specifics"
+bitwarden.sh
+bwdata
+src/Core/Services/Implementations/LicensingService.cs
