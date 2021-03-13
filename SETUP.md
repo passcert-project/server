@@ -78,7 +78,7 @@ There are 2 options for deploying your own SQL server.
 
 **Note 2:** you will need the `SA_PASSWORD` you set here for the connection string in your user secrets (see below).
 
-The SQL server should be running smoothly. :hooray:
+The SQL server should be running smoothly. :tada:
 
 # Server
 
