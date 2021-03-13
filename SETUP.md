@@ -173,7 +173,9 @@ Alternatively, there are emulators that allow you to run local dev instances of 
 
 This is an example user secrets file for both the Api and Identity projects.
 
-**Note:** Possibly, it will be found in the folder `~/.microsoft/usersecrets/`
+**Note 1:** These user secret files will be found in the folder `~/.microsoft/usersecrets/` for macOS and possibly, for all UNIX systems.
+
+**Note 2:** Remove the previously created entries `"<key>" "<value>"`
 
 ```json
 {
