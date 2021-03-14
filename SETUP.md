@@ -224,7 +224,7 @@ var certThumbprint = !environment.IsDevelopment() ? "207E64A231E8AA32AAF68A61037
 
 ⚠️ Do not commit this change, as it might ruin the experience for others.
 
-If you changed this file, maybe tell git to don't assume any changes on it, with this command:
+If you changed this file, maybe tell git to stop assuming any changes on it, with this command:
 
 `git update-index --assume-unchanged src/Core/Services/Implementations/LicensingService.cs`
 
