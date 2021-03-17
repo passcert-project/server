@@ -57,13 +57,13 @@ There are 2 options for deploying your own SQL server.
 
 3. Now run the command `./bitwarden.sh start`. This will give you the entire Bitwarden Server (not just the SQL server), but it is the quickest and easiest method to get what you need.
 
-- Maybe run the command `docker ps` to see the status of each container
+   - Maybe run the command `docker ps` to see the status of each container
 
 4. Now stop the execution with `./bitwarden.sh stop`
 
 5. Open a terminal with elevated privileges and navigate to your `bwdata` install folder
 
-- Might work without elevated privileges
+   - Might work without elevated privileges
 
 6. Run the SQL Docker container with these arguments:
 
@@ -74,11 +74,11 @@ There are 2 options for deploying your own SQL server.
    --mount type=bind,source="$(pwd)"/mssql/backups,target=/etc/bitwarden/mssql/backups bitwarden/mssql
    ```
 
-   **Note 1:** Beware the rules of the password. It has to be at least 8 characters and contain 3 of the 4 classes: _lower-case, upper-case, numbers, symbols_.
+**Note 1:** Beware the rules of the password. It has to be at least 8 characters and contain 3 of the 4 classes: _lower-case, upper-case, numbers, symbols_.
 
 **Note 2:** you will need the `SA_PASSWORD` you set here for the connection string in your user secrets (see below).
 
-The SQL server should be running smoothly. :hooray:
+The SQL server should be running smoothly. :tada:
 
 # Server
 
@@ -96,7 +96,9 @@ Right-click on the project in the Solution Explorer and click **Manage User Secr
 
 ### Editing user secrets - Visual Studio on macOS
 
-Open a terminal and navigate to the project directory. Once there, initiate and create the blank user secrets file by running:
+Open a terminal and navigate to the project directory, like `src/<project-name>`. For our setup, only `src/Identity` and `src/Api` are relevant.
+
+Once there, initiate and create the blank user secrets file by running:
 
 ```bash
 dotnet user-secrets init
@@ -165,7 +167,7 @@ Alternatively, there are emulators that allow you to run local dev instances of 
 
 **licenseDirectory**: this must be set to avoid errors, but it can be set to an aribtrary empty folder.
 
-- I'm using macOs and my folder path is: `c:/bwtest/licenses`
+- I'm using macOS and my folder path is: `c:/bwtest/licenses`
 
 **installation\_\_key** and **installation\_\_id**: request your own private Installation Id and Installation Key for self-hosting: https://bitwarden.com/host/.
 
@@ -173,7 +175,9 @@ Alternatively, there are emulators that allow you to run local dev instances of 
 
 This is an example user secrets file for both the Api and Identity projects.
 
-**Note:** Possibly, it will be found in the folder `~/.microsoft/usersecrets/`
+**Note 1:** These user secret files will be found in the folder `~/.microsoft/usersecrets/` for macOS and possibly, for all UNIX systems.
+
+**Note 2:** Remove the previously created entries `"<key>" "<value>"`
 
 ```json
 {
@@ -219,6 +223,11 @@ var certThumbprint = !environment.IsDevelopment() ? "207E64A231E8AA32AAF68A61037
 ```
 
 ⚠️ Do not commit this change, as it might ruin the experience for others.
+
+If you changed this file, maybe tell git to stop assuming any changes on it, with this command:
+
+`git update-index --assume-unchanged src/Core/Services/Implementations/LicensingService.cs`
+
 
 # After the first installation
 
